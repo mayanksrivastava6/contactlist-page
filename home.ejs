@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <span style="font-size: 48px; color: Dodgerblue;">
+                <i class="fa fa-address-book-o"></i>
+                
+            
+            Contact List
+        </h1>
+
+        <div id="contacts-list-container"> 
+            <ul>
+                   
+                <% for (let i of contact_list) { %> 
+                    
+                    <li class="contact">
+                        <div class="details">
+                        <p><%= i.name %>
+                        <%= i.phone %></p>
+                    </div>
+                   
+                    <div class="delete-button">
+                            <a href="/delete-contact/?phone=<%= i.phone %>">
+                                
+                                <i class="fa fa-minus-circle"></i>
+                                
+                            </a>
+                    </div>
+                    </li>
+                    
+                <% } %>
+            </ul>
+        </div>
+
+        <form id="new-contact-form" action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter phone" required>
+            <button type="submit">Add contact</button>
+        </form>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

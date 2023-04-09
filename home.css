@@ -1,0 +1,30 @@
+body{
+  /* object-position: center; */
+     text-align: center; 
+    margin: 0;
+    font-family: sans-serif ;
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+p{
+  color: blue;
+  flex: content;
+}
+
+/* h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+      
+  } */
+  
+  div.class.detail{  
+    background-color: blue;
+    /* color: white;  */
+    list-style-type: upper-roman;
+    /* text-align: justify; */
+  }
+ 
